@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MetroFare</title>
+    <link rel="stylesheet" href="../CSS/map.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Roboto+Slab:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/afeb5cb5c9.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css"
+    />
+  </head>
+
+  <body>
+    <!-- Navbar Section -->
+    <nav class="navbar">
+      <div class="navbar__container">
+        <a href="/" id="navbar__logo"
+          ><i class="fa-solid fa-van-shuttle"></i>MetroFare</a
+        >
+        <div class="navbar__toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="navbar__menu">
+          <li class="navbar__item">
+            <a href="../HTML/home_loggedIn.html" class="navbar__links">Home</a>
+          </li>
+          <li class="navbar__item">
+            <a href="../HTML/where_loggedIn.html" class="navbar__links"
+              >Route</a
+            >
+          </li>
+          <li class="navbar__item">
+            <a href="#about-section" class="navbar__links">About</a>
+          </li>
+          <li class="navbar__btn">
+            <a href="../index.html" class="button">Sign out</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Hero Section -->
+    <div class="container">
+      <div class="search-box">
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Search for a location..."
+        />
+        <button id="search-button">Search</button>
+      </div>
+
+      <div id="map"></div>
+
+      <h2>Popular Destinations</h2>
+      <div class="location-list">
+        <div class="location-card" data-lat="14.4318" data-lng="120.9367">
+          <h3>Imus, Philippines</h3>
+          <p>
+            Historical city in Cavite Province known for the Battle of Alapan.
+          </p>
+        </div>
+        <div class="location-card" data-lat="14.5995" data-lng="120.9842">
+          <h3>Manila</h3>
+          <p>
+            The capital city of the Philippines with rich history and culture.
+          </p>
+        </div>
+        <div class="location-card" data-lat="14.4791" data-lng="120.8970">
+          <h3>Kawit</h3>
+          <p>
+            Neighboring municipality famous for being the birthplace of
+            Philippine independence.
+          </p>
+        </div>
+        <div class="location-card" data-lat="14.3931" data-lng="120.8980">
+          <h3>Dasmariñas</h3>
+          <p>University town and growing commercial center in Cavite.</p>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+    <script src="../SCRIPT/map.js"></script>
+  </body>
+  <footer class="footer" id="about-section">
+    <div class="footer__container">
+      <div class="footer__about">
+        <h2><i class="fa-solid fa-van-shuttle"></i> MetroFare</h2>
+        <p>
+          MetroFare is your comprehensive public transportation companion,
+          providing real-time updates, route planning, and travel information to
+          make your commute easier and more efficient.
+        </p>
+      </div>
+      <div class="footer__links">
+        <div class="footer__link-wrapper">
+          <h3>Quick Links</h3>
+          <a href="../HTML/home_loggedIn.html">Home</a>
+          <a href="../HTML/where_loggedIn.html">Route</a>
+          <a href="../HTML/map_loggedIn.html">Maps & Schedules</a>
+          <a href="#road__section">Road Updates</a>
+        </div>
+        <div class="footer__link-wrapper">
+          <h3>Resources</h3>
+          <a href="#">FAQ</a>
+          <a href="#">Help Center</a>
+          <a href="c#">Contact Us</a>
+          <a href="#">Provide Feedback</a>
+        </div>
+        <div class="footer__link-wrapper">
+          <h3>Legal</h3>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Accessibility</a>
+        </div>
+      </div>
+      <div class="footer__social">
+        <h3>Connect With Us</h3>
+        <div class="footer__social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <div class="footer__newsletter">
+          <h3>Subscribe to Updates</h3>
+          <form>
+            <input type="email" placeholder="Enter your email" />
+            <button type="submit">
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; 2025 MetroFare. All rights reserved.</p>
+      <p>Developed for faster, smarter commuting.</p>
+    </div>
+  </footer>
+</html>
